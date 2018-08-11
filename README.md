@@ -3,11 +3,13 @@ Invoke JavaScript functions from .NET in blazor apps using JavaScript interop
 
 ## Steps
 * Add the code in your razor page
+
 `protected override async Task OnInitAsync()`
 `{`
  `   await JSRuntime.Current.InvokeAsync<string> ("betterSeo.metaChanger","Your title","Your Description","Your keywords");`
 `}`
 * That will code the javascript function
+
 `window.betterSeo = {`
 `  metaChanger: function(title, description, keywords) {`
    ` document.title = title;`
@@ -17,3 +19,6 @@ Invoke JavaScript functions from .NET in blazor apps using JavaScript interop
   `}`
 `};`
 * And this is it, Now the meta tags will be updated on the client request
+
+## Screenshot
+![Blazor seo meta tags](https://user-images.githubusercontent.com/24621701/43996274-20f7cf06-9db7-11e8-8cbe-0c7a784cf948.png)
