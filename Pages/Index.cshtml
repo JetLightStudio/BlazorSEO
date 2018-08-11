@@ -1,7 +1,16 @@
-﻿@page "/"
-
+﻿@using Microsoft.JSInterop
+@page "/"
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<SurveyPrompt Title="How is Blazor working for you?"/>
+
+@functions{
+
+  protected override async Task OnInitAsync()
+  {
+    await JSRuntime.Current.InvokeAsync<string>("betterSeo.metaChanger", "Home", "Home demo description", "FetchData,blazor,serverside");
+  }
+
+}
