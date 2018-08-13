@@ -7,7 +7,7 @@ Invoke JavaScript functions from .NET in blazor apps using JavaScript interop
 `{`<br>
  `   await JSRuntime.Current.InvokeAsync<string> ("betterSeo.metaChanger","Your title","Your Description","Your keywords");`<br>
 `}`<br>
-* That will code the javascript function<br>
+* That will call the javascript function<br>
 `window.betterSeo = {`<br>
 `  metaChanger: function(title, description, keywords) {`<br>
    `   document.title = title;`<br>
